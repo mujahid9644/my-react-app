@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import PaymentForm from './components/PaymentForm';
 import TaskSubmitForm from './components/TaskSubmitForm';
 import AdsenseModal from './components/AdsenseModal';
@@ -263,8 +264,8 @@ export default function App() {
           <nav className="hidden md:flex items-center space-x-6">
             <a href="#features" className="text-gray-600 hover:text-green-600">ফিচারসমূহ</a>
             <a href="#how-it-works" className="text-gray-600 hover:text-green-600">কিভাবে কাজ করে</a>
-            <a href="#login" className="text-gray-600 hover:text-green-600">লগইন</a>
-            <a href="#register" className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 font-semibold">রেজিস্ট্রেশন করুন</a>
+            <Link href="/login" className="text-gray-600 hover:text-green-600">লগইন</Link>
+            <Link href="/register" className="bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 font-semibold">রেজিস্ট্রেশন করুন</Link>
           </nav>
           <div className="md:hidden">
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-gray-600 focus:outline-none">
@@ -276,8 +277,8 @@ export default function App() {
           <nav className="md:hidden bg-white py-4">
             <a href="#features" className="block text-center py-2 px-4 text-gray-600 hover:bg-green-50">ফিচারসমূহ</a>
             <a href="#how-it-works" className="block text-center py-2 px-4 text-gray-600 hover:bg-green-50">কিভাবে কাজ করে</a>
-            <a href="#login" className="block text-center py-2 px-4 text-gray-600 hover:bg-green-50">লগইন</a>
-            <a href="#register" className="block text-center py-2 px-4 bg-green-500 text-white rounded-md mx-4 mt-2 font-semibold">রেজিস্ট্রেশন করুন</a>
+            <Link href="/login" className="block text-center py-2 px-4 text-gray-600 hover:bg-green-50">লগইন</Link>
+            <Link href="/register" className="block text-center py-2 px-4 bg-green-500 text-white rounded-md mx-4 mt-2 font-semibold">রেজিস্ট্রেশন করুন</Link>
           </nav>
         )}
       </header>
